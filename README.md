@@ -9,19 +9,19 @@ This project is intentionally opinionated and minimal to serve as a starting poi
 ## Overview
 
 **On-chain components**
-- `DAOTreasury.sol` — Treasury contract that:
+- `DAOTreasury.sol` - Treasury contract that:
   - Receives and holds ETH.
   - Accepts proposals from an owner or a configured relayer (the relayer represents the off-chain ML adapter).
   - Allows simple voting (1-address => 1-vote) during a configurable voting period.
   - Executes a passed proposal by transferring ETH to a strategy contract and calling its `execute` method.
 
-- `IStrategy.sol` / `StrategyMock.sol` — Strategy interface & mock example.
+- `IStrategy.sol` / `StrategyMock.sol` - Strategy interface & mock example.
 
-- `DAOAccessControl.sol` — Owner + relayer pattern for submitting proposals.
+- `DAOAccessControl.sol` - Owner + relayer pattern for submitting proposals.
 
 **Off-chain components**
 - `offchain/ml_adapter.py` — Example stub: an ML adapter that would produce strategy recommendations and write a proposal JSON file.
-- `scripts/` — Hardhat scripts to propose, vote, execute.
+- `scripts/` - Hardhat scripts to propose, vote, execute.
 
 ---
 
