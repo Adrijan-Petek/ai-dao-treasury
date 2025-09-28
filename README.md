@@ -1,10 +1,6 @@
-# AI-Assisted DAO Treasury — Template
+# AI DAO Treasury
 
-**AI-Assisted DAO Treasury** is a developer template that demonstrates a minimal on-chain DAO treasury with off-chain ML-assisted proposals.
-
-This project is intentionally opinionated and minimal to serve as a starting point. **Do not use in production** without extensive audits and governance hardening.
-
----
+A decentralized autonomous organization (DAO) treasury system that uses AI/ML recommendations to allocate funds to investment strategies. The system combines on-chain governance with off-chain AI analysis for automated fund management.
 
 ## Overview
 
