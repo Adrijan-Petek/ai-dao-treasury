@@ -1,4 +1,4 @@
-# AI-Assisted DAO Treasury — Template
+# AI-Assisted DAO Treasury - Template
 
 **AI-Assisted DAO Treasury** is a developer template that demonstrates a minimal on-chain DAO treasury with off-chain ML-assisted proposals.
 
