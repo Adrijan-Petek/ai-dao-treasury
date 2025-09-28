@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.20;
 
 import "./IStrategy.sol";
 import "./DAOAccessControl.sol";
@@ -20,6 +20,8 @@ contract DAOTreasury is DAOAccessControl {
         bool executed;
         string description;
     }
+
+    constructor(address initialOwner) DAOAccessControl(initialOwner) {}
 
     uint256 public proposalCount;
     mapping(uint256 => Proposal) public proposals;

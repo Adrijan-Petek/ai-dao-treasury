@@ -59,7 +59,7 @@ This prints deployed addresses. Fund the DAOTreasury with:
 ```bash
 # in a new terminal:
 npx hardhat console --network hardhat
-> (await ethers.getSigners())[0].sendTransaction({to: '<DAO_ADDRESS>', value: ethers.utils.parseEther('1')})
+> (await ethers.getSigners())[0].sendTransaction({to: '<DAO_ADDRESS>', value: ethers.parseEther('1')})
 ```
 
 4. Generate a demo proposal using the off-chain adapter

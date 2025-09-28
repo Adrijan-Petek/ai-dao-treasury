@@ -8,15 +8,11 @@ async function main() {
 
   console.log('Deploying contracts with account:', deployer.address);
 
-  const DAOTreasury = await hre.ethers.getContractFactory('DAOTreasury');
-  const dao = await DAOTreasury.deploy();
-  await dao.deployed();
-  console.log('DAOTreasury deployed to:', dao.address);
-
-  const StrategyMock = await hre.ethers.getContractFactory('StrategyMock');
-  const strat = await StrategyMock.deploy();
-  await strat.deployed();
-  console.log('StrategyMock deployed to:', strat.address);
+  const Simple = await hre.ethers.getContractFactory('Simple');
+  const simple = await Simple.deploy(42);
+  console.log('Simple deployed, waiting...');
+  await simple.waitForDeployment();
+  console.log('Simple deployed to:', simple.target);
 
   console.log('Done. You can now fund the treasury with:', dao.address);
 }
